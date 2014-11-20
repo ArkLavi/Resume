@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>canvas</title>
+  <meta charset="utf-8">
+
+  <canvas id="smile" width="320" height="420">
+    <p>Ваш браузер не поддерживает рисование.</p>
+  </canvas>
+
+<script type="text/javascript">
+    var myCanvas = document.getElementById('smile');
+
+     var cxt = myCanvas.getContext('2d');
+
+cxt.moveTo(50,50);  // Пеpемещает «карандаш» в указанную точку.
+cxt.lineTo(150,50);
+cxt.lineTo(175,75);
+cxt.lineTo(175,100);
+cxt.lineTo(150,100);
+cxt.lineTo(150,115);
+cxt.lineTo(175,115);
+cxt.lineTo(175,175);
+cxt.lineTo(50,175);
+cxt.lineTo(50,50);
+cxt.stroke();
+
+ cxt.fillStyle = '#000000';
+ cxt.fill();
+ cxt.lineWidth = 5;
+ cxt.strokeStyle = 'black';
+ cxt.stroke();
+
+     cxt.strokeStyle = "#000";
+     cxt.fillStyle = "#fff";
+     cxt.beginPath();
+     cxt.arc(110,110,15,0,Math.PI*2,true);
+     cxt.closePath();
+     cxt.stroke();
+     cxt.fill();
+
+      cxt.scale(1, 2);
+     cxt.strokeStyle = "#000";
+     cxt.fillStyle = "#fff";
+     cxt.beginPath();
+     cxt.arc(110,75,5,0,Math.PI*2,true);
+     cxt.closePath();
+     cxt.stroke();
+     cxt.fill();
+
+    cxt.fillStyle="#fff";
+    cxt.fillRect(60,30,50,10);
+
+  </script>
+ </head>
+ <body>
+</html>

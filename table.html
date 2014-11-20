@@ -1,0 +1,59 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style>
+.red
+{
+color: red;
+}
+</style>
+<script>
+function get_rand(min,max){
+var r = min - 0.5 + Math.random()*(max-min+1);
+return Math.round(r);
+}
+function do_it(){
+var sssr = '<table id="Table" align=center bgcolor=OldLace>';
+for (var i=1; i < 10; i++){
+sssr = sssr + '<tr>';
+for (var j=1; j < 10; j++){
+sssr = sssr + '<td>'+get_rand(1,50)+'</td>';
+}
+sssr = sssr + '</tr>';
+}
+sssr = sssr + '</table>';
+document.getElementById('pole').innerHTML = sssr;
+}
+
+function show(){
+var table = document.getElementById('Table');
+for (var i=0; i<table.rows.length; i++) {
+for (var j=0; j<table.rows[0].cells.length; j++) {
+var TD=table.rows[i].cells[j];
+if(TD.innerHTML==(22)) { 
+TD.style.backgroundColor = "red";
+}
+if(TD.innerHTML==(23)) { 
+TD.style.backgroundColor = "red";
+}
+if(TD.innerHTML==(24)) { 
+TD.style.backgroundColor = "red";
+}
+if(TD.innerHTML==(21)) { 
+TD.style.backgroundColor = "red";
+}
+}
+}
+}
+
+</script>
+</head>
+<body align=center>
+<input type="button" id="push" value="Random" onClick="do_it()" >
+<input type="button" id="push" value="Red" onClick="show()" >
+<div id="pole">
+
+</div>
+</body>
+</html>

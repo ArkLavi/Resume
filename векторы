@@ -1,0 +1,25 @@
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Найти длину вектора по координатам</title>
+</head>
+<body>
+<input  type = "text" id="B" placeholder ="b">
+<br>
+<input  type = "text" id="C" placeholder ="c">
+<br>
+<input  type = "text" id="D" placeholder ="d">
+<br>
+<input  type = "button" onclick="reshenie()" value="Решение">
+<br>
+<script>
+function reshenie(){
+var b=document.getElementById('B').value;
+var c=document.getElementById('C').value;
+var d=document.getElementById('D').value;
+var a=Math.sqrt(b*b+c*c+d*d);
+alert(a);
+}
+</script>
+</body>
+</html>
